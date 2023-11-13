@@ -1,5 +1,5 @@
 const { createProxyMiddleware } = require('http-proxy-middleware')
-const DEV_SERVER = 'localhost:5000'
+const DEV_SERVER = 'localhost:1010'
 
 module.exports = function (app) {
   app.use(

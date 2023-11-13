@@ -14,11 +14,6 @@ const App = ({ appMounted, appWillUnmount, value, changeValue, t }) => {
 
   return (
     <div className='App'>
-      {t('authentication.wellcome')}
-      <div>
-        {value}
-        <button onClick={changeValue}>Change Value</button>
-      </div>
       <Router history={history}>
         <Switch>
           <Route exact path={HOME} component={Home} />

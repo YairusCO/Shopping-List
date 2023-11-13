@@ -1,15 +1,15 @@
 import RootStore from './RootStore'
 import AuthenticationStore from '../AuthenticationStore'
+import ShoppingListStore from '../ShoppingListStore'
 
 import storage from '../../services/storage'
-import apis from '../../services/apis.js'
 import router from '../../services/router'
 
 export default new RootStore({
-  apis,
   router,
   storage,
   window,
+  shoppingListStore: new ShoppingListStore(),
   authenticationStore: new AuthenticationStore({
     doesUserAuthenticated: false,
     token: null,

@@ -13,6 +13,7 @@ class RootStore {
     window,
     TOKEN_KEYWORD,
     authenticationStore,
+    shoppingListStore,
   }) {
     makeObservable(this, {
       appMounted: action,
@@ -26,8 +27,10 @@ class RootStore {
     this.TOKEN_KEYWORD = TOKEN_KEYWORD
 
     this.authenticationStore = authenticationStore
+    this.shoppingListStore = shoppingListStore
 
     this.authenticationStore.rootStore = this
+    this.shoppingListStore.rootStore = this
     this.logout = this.logout.bind(this)
     this.register = this.register(this)
     this.loggedIn = this.loggedIn.bind(this)
@@ -56,6 +59,9 @@ class RootStore {
   register() {}
 
   appMounted() {
+    this.shoppingListStore.getCategories()
+    this.shoppingListStore.getAllProducts()
+
     dispatch(Actions.APPLICATION_MOUNTED, {
       value: 'Example of value that send on action',
     })

@@ -95,7 +95,7 @@ class AuthenticationStore {
   /* @action */
   verifyUserAuthenticated() {
     if (!this.doesUserAuthenticated) {
-      history.push(LOGIN)
+      // history.push(LOGIN)
     }
   }
 }
