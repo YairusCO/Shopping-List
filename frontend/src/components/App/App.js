@@ -4,6 +4,8 @@ import history from '../../services/history'
 import { HOME, LOGIN } from '../../util/routes'
 import Login from '../Login'
 import Home from '../Home'
+import Header from '../Header'
+import Footer from '../Footer'
 const App = ({ appMounted, appWillUnmount, value, changeValue, t }) => {
   useEffect(() => {
     appMounted()
@@ -15,10 +17,12 @@ const App = ({ appMounted, appWillUnmount, value, changeValue, t }) => {
   return (
     <div className='App'>
       <Router history={history}>
+        <Header />
         <Switch>
           <Route exact path={HOME} component={Home} />
           <Route exact path={LOGIN} component={Login} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   )

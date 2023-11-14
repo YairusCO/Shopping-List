@@ -25,12 +25,7 @@ export async function addProduct(request, reply) {
       return;
     }
     const products = this.mongo.db.collection("products");
-    // const exists = await products.findOne({ name });
-    // if (exists) {
-    //   reply.status(httpStatus.CONFLICT).send({
-    //     message: `Product: ${name} already exists.`,
-    //   });
-    // }
+
     const categories = this.mongo.db.collection("categories");
     const id = new this.mongo.ObjectId(categoryId);
     const categoryExists = await categories.findOne({ _id: id });

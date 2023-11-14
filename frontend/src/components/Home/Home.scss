@@ -1,0 +1,47 @@
+.home {
+  padding-right: 32px;
+  padding-left: 32px;
+}
+.title-grid.title-grid.title-grid.title-grid {
+  margin-top: 73px;
+  align-items: center;
+  height: 103px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #551a8b9e;
+  .title {
+    font-size: 2rem;
+    color: #ffff;
+  }
+}
+
+.form-grid {
+  padding: 50px;
+  .MuiOutlinedInput-notchedOutline {
+    border-color: #551a8b9e !important;
+  }
+  .Mui-focused {
+    color: #551a8b9e !important;
+  }
+}
+
+.add-btn {
+  background-color: #551a8b9e !important;
+  width: 188px;
+  height: 56px;
+}
+
+.the-list {
+  margin-bottom: 50px;
+  .category-title {
+    min-height: 100px;
+    padding: 25px 30px;
+    margin: '5px';
+    background-color: rgb(149 121 175 / 62%);
+    border: 1px solid grey;
+  }
+  .cell {
+    padding: 8px 5px;
+  }
+}

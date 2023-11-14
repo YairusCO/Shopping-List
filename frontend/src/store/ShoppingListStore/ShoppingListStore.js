@@ -1,10 +1,4 @@
-import {
-  observable,
-  makeObservable,
-  action,
-  configure,
-  runInAction,
-} from 'mobx'
+import { observable, makeObservable, action } from 'mobx'
 
 import { getCategories, getProducts, addProduct } from '../../services/apis'
 
@@ -12,12 +6,14 @@ class ShoppingListStore {
   category = ''
   products = []
   categories = []
+  productsCount = 0
 
   constructor() {
     makeObservable(this, {
       category: observable,
       categories: observable,
       products: observable,
+      productsCount: observable,
       /* Actions */
       addToShoppingList: action,
       setCategory: action,
